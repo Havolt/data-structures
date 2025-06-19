@@ -1,0 +1,17 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:fibonacci": "tsc-watch src/fibonacci.ts --outDir ./dist --onSuccess \"node ./dist/fibonacci.js\"",
+    "start:bubble-sort": "tsc-watch src/bubble-sort.ts --outDir ./dist --onSuccess \"node ./dist/bubble-sort.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsc-watch": "^7.1.1",
+    "typescript": "^5.8.3"
+  }
+}
