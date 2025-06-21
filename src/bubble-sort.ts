@@ -4,6 +4,7 @@
 // Go through the array as many times as there are values in the array.
 function bubbleSort(numArr: number[]): number[] {
   let lastSwapPos = numArr.length - 1;
+  let swapped = false;
   // Go through all items
   for (let i = 0; i < numArr.length; i++) {
     // One less item to check with each loop
@@ -12,8 +13,13 @@ function bubbleSort(numArr: number[]): number[] {
         const tempFirst = numArr[j];
         numArr[j] = numArr[j + 1];
         numArr[j + 1] = tempFirst;
+        swapped = true;
       }
     }
+    if (!swapped) {
+      break;
+    }
+    swapped = false;
     lastSwapPos--;
   }
   return numArr;
