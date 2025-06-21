@@ -17,11 +17,12 @@ function selectionSort(unsortedArr: number[]) {
     //   If we found a low number then remove it
     if (lowestNumIndex && lowestNum) {
       // Move everything between start and moved number forward one space
-      for (let n = lowestNumIndex; n > i; n--) {
-        unsortedArr.splice(n, 1, unsortedArr[n - 1]);
-      }
+      // for (let n = lowestNumIndex; n > i; n--) {
+      //   unsortedArr.splice(n, 1, unsortedArr[n - 1]);
+      // }
       // Move lowest number to the lowest unsorted position
-      unsortedArr.splice(i, 1, lowestNum);
+      unsortedArr[lowestNumIndex] = unsortedArr[i];
+      unsortedArr[i] = lowestNum;
       // Reset lowestNum vals
       lowestNum = null;
       lowestNumIndex = null;
