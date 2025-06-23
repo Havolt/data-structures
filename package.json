@@ -7,7 +7,8 @@
     "start:fibonacci": "tsc-watch src/fibonacci.ts --outDir ./dist --onSuccess \"node ./dist/fibonacci.js\"",
     "start:bubble-sort": "tsc-watch src/bubble-sort.ts --outDir ./dist --onSuccess \"node ./dist/bubble-sort.js\"",
     "start:selection-sort": "tsc-watch src/selection-sort.ts --outDir ./dist --onSuccess \"node ./dist/selection-sort.js\"",
-    "start:insertion-sort": "tsc-watch src/insertion-sort.ts --outDir ./dist --onSuccess \"node ./dist/insertion-sort.js\""
+    "start:insertion-sort": "tsc-watch src/insertion-sort.ts --outDir ./dist --onSuccess \"node ./dist/insertion-sort.js\"",
+    "start:quick-sort": "tsc-watch src/quick-sort.ts --outDir ./dist --onSuccess \"node ./dist/quick-sort.js\""
   },
   "keywords": [],
   "author": "",
