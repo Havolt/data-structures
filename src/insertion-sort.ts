@@ -7,16 +7,14 @@ function insertionSort(unsortedArr: number[]): number[] {
   if (unsortedArr.length < 2) {
     return unsortedArr;
   }
-  // Length of the array we've sorted (has to be at least one)
-  let sortedArrLength = 1;
 
   // Loop through array to check all numbers
-  for (let i = sortedArrLength; i < unsortedArr.length; i++) {
+  for (let i = 1; i < unsortedArr.length; i++) {
     let currentNum = unsortedArr[i];
     // Loop through the sorted section of the array
-    for (let j = sortedArrLength - 1; j >= 0; j--) {
+    for (let j = i - 1; j >= 0; j--) {
       // If the current number is larger than sorted list max then leave as is
-      if (j === sortedArrLength - 1 && unsortedArr[j] < currentNum) {
+      if (j === i - 1 && unsortedArr[j] < currentNum) {
         break;
       }
       // If number to sort is less than the iteration number then move iteration number to the right
@@ -29,7 +27,6 @@ function insertionSort(unsortedArr: number[]): number[] {
         break;
       }
     }
-    sortedArrLength++;
   }
   return unsortedArr;
 }
